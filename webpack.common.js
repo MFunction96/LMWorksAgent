@@ -7,9 +7,6 @@ module.exports = {
 		filename: "[name].bundle.js",
 		path: path.resolve(__dirname, "dist")
 	},
-	node: {
-		__dirname: false
-	},
 	/*	optimization: {
       splitChunks: {
         chunks: "all",
@@ -90,5 +87,16 @@ module.exports = {
 			test: /\.js$/,
 			loader: "source-map-loader"
 		}]
-	}
+	},
+	node: {
+		__dirname: false,
+		module: 'empty',
+		dgram: 'empty',
+		dns: 'mock',
+		fs: 'empty',
+		http2: 'empty',
+		net: 'empty',
+		tls: 'empty',
+		child_process: 'empty',
+	  }
 };

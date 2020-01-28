@@ -9,13 +9,20 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@types/history": "^4.7.4",
+    "@types/lodash": "^4.14.149",
     "@types/node": "^13.5.0",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-redux": "^7.1.7",
+    "@types/react-router": "^5.1.4",
+    "@types/react-router-dom": "^5.1.3",
     "@types/source-map-support": "^0.5.1",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "csv-loader": "^3.0.2",
     "electron": "^7.1.9",
     "electron-builder": "^22.2.0",
+    "electron-debug": "^3.0.1",
     "electron-is-dev": "^1.1.0",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
@@ -50,13 +57,15 @@
     "react-intl": "^3.11.0",
     "react-redux": "^7.1.3",
     "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "rsuite": "^4.2.0"
   },
   "scripts": {
     "dev": "webpack --progress --config webpack.electron.js",
-    "debug": "webpack --progress --config webpack.electron.js && electron ./dist/electron.bundle.js",
+    "run": "webpack --progress --config webpack.electron.js && electron ./dist/electron.bundle.js",
+    "debug": "webpack --progress --config webpack.electron.js && electron --inspect=5858 ./dist/electron.bundle.js",
     "prod": "webpack --progress --config webpack.electron.js"
   },
   "eslintConfig": {

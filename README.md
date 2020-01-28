@@ -15,6 +15,6 @@
 
 ---
 
-Copyright &copy; 2019 - 2020 MFunction Lyoko
+Copyright &copy; 2019 - 2020 MFunction LMWorks
 
 All Right Reserved

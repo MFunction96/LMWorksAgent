@@ -4,18 +4,23 @@ const common = require('./webpack.common.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 
-const serverConfig = merge(common, {
+const mainConfig = merge(common, {
   mode: 'development',
   target: 'electron-main',
-  entry: { electron: './electron.ts' }
+  entry: { main: './main.ts' }
 })
 
-const clientConfig = merge(common, {
+const preloadConfig = merge(common, {
+  mode: 'development',
+  target: 'electron-preload',
+  entry: { preload: './preload.ts' }
+})
+
+const rendererConfig = merge(common, {
   mode: 'development',
   target: 'electron-renderer',
-  entry: { electron_render: './electron_render.ts' },
+  entry: { renderer: './src/renderer.tsx' },
   plugins: [
-    // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
     new HtmlWebpackPlugin({
       title: 'Electron',
       mobile: true,
@@ -35,4 +40,4 @@ const clientConfig = merge(common, {
   ]
 })
 
-module.exports = [serverConfig, clientConfig]
+module.exports = [mainConfig, preloadConfig, rendererConfig]
