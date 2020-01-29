@@ -1,9 +1,14 @@
+/*
+	Create by MFunction at 01/28/2020.
+	Main window of electron.
+*/
 import {app, BrowserWindow} from 'electron';
 import debug from 'electron-debug';
 import path from "path";
 declare var __dirname: string;
 let mainWindow: Electron.BrowserWindow;
 
+// Launch debug mode
 debug();
 
 function onReady() {
@@ -11,6 +16,8 @@ function onReady() {
 		width: 800,
 		height: 600,
 		webPreferences: {
+			// For security reason, set nodeIntegration to false.
+			// For more details please visit https://www.electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron.
 			nodeIntegration: false,
 			// Below is where we specify our preload script. __dirname points to our source file's path and the preload
 			// path should point to the Webpack-emitted preload bundle.

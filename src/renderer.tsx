@@ -1,3 +1,7 @@
+/*
+	Create by MFunction at 01/28/2020.
+	Electron view access file, define react booting procedure.
+*/
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {Provider} from "react-redux";
