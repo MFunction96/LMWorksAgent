@@ -6,20 +6,20 @@ import {connect} from "react-redux";
 import logo from "../logo.svg";
 import {Toggle, Container} from "rsuite";
 import {RouteComponentProps} from "react-router";
-import * as SystemInfoStore from "../store/SystemInfoStore";
+import * as HomeStore from "../store/HomeStore";
 import {ApplicationState} from "../store";
-import {getLyokoDate, getLyokoTime} from "../Models/LyokoTime";
+import {getLyokoDate, getLyokoTime} from "../models/LyokoTime";
 
-type SystemInfoProps =
-	SystemInfoStore.SystemInfoState // ... state we've requested from the Redux store
-	& typeof SystemInfoStore.actionCreators // ... plus action creators we've requested
+type HomeProps =
+	HomeStore.HomeState // ... state we've requested from the Redux store
+	& typeof HomeStore.actionCreators // ... plus action creators we've requested
 	//& RouteComponentProps<{ key: string }>; // ... plus incoming routing parameters
 	& RouteComponentProps; // ... plus incoming routing parameters
 
-class Home extends React.PureComponent<SystemInfoProps> {
+class Home extends React.PureComponent<HomeProps> {
 	ShowTime: boolean;
 
-	constructor(props: SystemInfoProps) {
+	constructor(props: HomeProps) {
 		super(props);
 		this.ShowTime = props.showTime;
 	}
@@ -96,6 +96,6 @@ class Home extends React.PureComponent<SystemInfoProps> {
 }
 
 export default connect(
-	(state: ApplicationState) => state.SystemInfoStore, // Selects which state properties are merged into the component's props
-	SystemInfoStore.actionCreators // Selects which action creators are merged into the component's props
+	(state: ApplicationState) => state.HomeStore, // Selects which state properties are merged into the component's props
+	HomeStore.actionCreators // Selects which action creators are merged into the component's props
 )(Home as any);

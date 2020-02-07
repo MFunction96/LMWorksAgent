@@ -1,9 +1,9 @@
 import {Action, Reducer} from "redux";
-import {AppThunkAction} from "./";
-import {LyokoTime} from "../Models/LyokoTime";
+import {AppThunkAction} from "./index";
+import {LyokoTime} from "../models/LyokoTime";
 import * as _ from "lodash";
 
-export class SystemInfoState{
+export class HomeState{
 	showTime: boolean;
 	serverTime: LyokoTime;
 	constructor() {
@@ -18,7 +18,7 @@ interface RequestSystemInfoAction {
 
 interface ReceiveSystemInfoAction {
 	type: "RECEIVE_SYSTEM_INFO";
-	SystemInfo: SystemInfoState;
+	SystemInfo: HomeState;
 }
 
 interface SwitchAction {
@@ -42,7 +42,7 @@ export const actionCreators = {
 			dispatch({type: "REQUEST_SYSTEM_INFO"});
 		}*/
 		fetch("systeminfo")
-			.then(response => response.json() as Promise<SystemInfoState>)
+			.then(response => response.json() as Promise<HomeState>)
 			.then(data => {
 				dispatch({type: "RECEIVE_SYSTEM_INFO", SystemInfo: data});
 			});
@@ -51,7 +51,7 @@ export const actionCreators = {
 	},
 	switchShow: (): AppThunkAction<KnownAction> => (dispatch, getState) => {
 		const appState = getState();
-		if (appState && appState.SystemInfoStore) {
+		if (appState && appState.HomeStore) {
 			dispatch({type: "SWITCH_SHOW"});
 		}
 	}
@@ -60,9 +60,9 @@ export const actionCreators = {
 // ----------------
 // REDUCER - For a given state and action, returns the new state. To support time travel, this must not mutate the old state.
 
-const unloadedState: SystemInfoState = new SystemInfoState();
+const unloadedState: HomeState = new HomeState();
 
-export const reducer: Reducer<SystemInfoState> = (state: SystemInfoState | undefined, incomingAction: Action): SystemInfoState => {
+export const reducer: Reducer<HomeState> = (state: HomeState | undefined, incomingAction: Action): HomeState => {
 	if (state === undefined) {
 		return unloadedState;
 	}

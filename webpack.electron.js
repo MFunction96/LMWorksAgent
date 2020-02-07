@@ -7,19 +7,19 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const mainConfig = merge(common, {
 	mode: 'development',
 	target: 'electron-main',
-	entry: { main: './src/main.ts' }
+	entry: { main: './src/electron/main.ts' }
 });
 
 const preloadConfig = merge(common, {
 	mode: 'development',
 	target: 'electron-preload',
-	entry: { preload: './src/preload.ts' }
+	entry: { preload: './src/electron/preload.ts' }
 });
 
 const rendererConfig = merge(common, {
 	mode: 'development',
 	target: 'electron-renderer',
-	entry: { renderer: './src/renderer.tsx' },
+	entry: { renderer: './src/electron/renderer.tsx' },
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'Electron',

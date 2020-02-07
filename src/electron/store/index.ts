@@ -1,9 +1,9 @@
 // The top-level state object
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-import * as SystemInfoStore from "./SystemInfoStore";
+import * as SystemInfoStore from "./HomeStore";
 
 export interface ApplicationState {
-	SystemInfoStore: SystemInfoStore.SystemInfoState | undefined;
+	HomeStore: SystemInfoStore.HomeState | undefined;
 }
 
 // Whenever an action is dispatched, Redux will update each top-level application state property using

@@ -1,4 +1,4 @@
-import {formatNumber} from "../Utils/CommonUtils";
+import {formatNumber} from "../utils/CommonUtils";
 
 export class LyokoTime {
 	separator: string;
