@@ -67,8 +67,8 @@
 	},
 	"scripts": {
 		"dev": "webpack --progress --config webpack.electron.js",
-		"run": "webpack --progress --config webpack.electron.js && electron ./dist/electron.bundle.js",
-		"debug": "webpack --progress --config webpack.electron.js && electron --inspect=5858 ./dist/electron.bundle.js",
+		"run": "webpack --progress --config webpack.electron.js && electron ./dist/main.bundle.js",
+		"debug": "webpack --progress --config webpack.electron.js && electron --inspect=5858 ./dist/main.bundle.js",
 		"prod": "webpack --progress --config webpack.electron.js"
 	},
 	"eslintConfig": {
