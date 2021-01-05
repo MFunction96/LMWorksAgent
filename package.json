@@ -46,7 +46,7 @@
 		"xml-loader": "^1.2.1"
 	},
 	"dependencies": {
-		"axios": "^0.19.2",
+		"axios": "^0.21.1",
 		"connected-react-router": "^6.6.1",
 		"core-js": "^3.6.4",
 		"electron": "^7.1.12",
