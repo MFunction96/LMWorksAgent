@@ -263,15 +263,15 @@
   resolved "https://registry.npm.taobao.org/@types/minimatch/download/@types/minimatch-3.0.3.tgz?cache=0&sync_timestamp=1580842916770&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fminimatch%2Fdownload%2F%40types%2Fminimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha1-PcoOPzOyAPx9ETnAzZbBJoyt/Z0=
 
-"@types/node@*", "@types/node@^13.5.0":
+"@types/node@*", "@types/node@^14.6.2":
+  version "14.18.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.12.tgz#0d4557fd3b94497d793efd4e7d92df2f83b4ef24"
+  integrity sha512-q4jlIR71hUpWTnGhXWcakgkZeHa3CCjcQcnuzU8M891BAWA2jHiziiWEPEkdS5pFsz7H9HJiy8BrK7tBRNrY7A==
+
+"@types/node@^13.5.0":
   version "13.7.0"
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-13.7.0.tgz?cache=0&sync_timestamp=1580842699956&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-13.7.0.tgz#b417deda18cf8400f278733499ad5547ed1abec4"
   integrity sha1-tBfe2hjPhADyeHM0ma1VR+0avsQ=
-
-"@types/node@^12.0.12":
-  version "12.12.26"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.26.tgz?cache=0&sync_timestamp=1580842699956&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.12.26.tgz#213e153babac0ed169d44a6d919501e68f59dea9"
-  integrity sha1-IT4VO6usDtFp1EptkZUB5o9Z3qk=
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -2038,13 +2038,13 @@ electron-publish@22.3.3:
     lazy-val "^1.0.4"
     mime "^2.4.4"
 
-electron@^7.1.12:
-  version "7.1.12"
-  resolved "https://registry.npm.taobao.org/electron/download/electron-7.1.12.tgz#7a9a416975f466b941c8ef1a48c5a50aefad494f"
-  integrity sha1-eppBaXX0ZrlByO8aSMWlCu+tSU8=
+electron@^13.6.6:
+  version "13.6.6"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-13.6.6.tgz#ebd4754b2b55d54a2e8e9cdc3d0a2bb6b7053827"
+  integrity sha512-TP2Bl1nTxaH1yRmlYiF7imzvKE/NASE0cl6wOYA3AaP/UrBGc4L3NwJfn5Z55o+1t4TH8vCRxENufESyb32HhA==
   dependencies:
     "@electron/get" "^1.0.1"
-    "@types/node" "^12.0.12"
+    "@types/node" "^14.6.2"
     extract-zip "^1.0.3"
 
 element-resize-event@^3.0.2, element-resize-event@^3.0.3:
